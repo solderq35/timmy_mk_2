@@ -34,10 +34,6 @@ exports.handler = async (event) => {
     const result_array = [];
     const score = body.data.options[0].value;
 
-    // message to note the score for ez copy pasting
-    var copymsg = "Score: " + score;
-    result_array.push(copymsg);
-
     // for all 20 possible M values
     for (let i = 1; i <= 20; i++) {
       // base M value multiplier (bonuses and penalties from rating screen)
@@ -85,14 +81,26 @@ exports.handler = async (event) => {
         result_array.push(formatted_result);
       }
     }
+    if (result_array.length > 0) {
+      var copymsg = "/time score " + score;
+      result_array.unshift(copymsg);
+    }
+
+    // if no numbers were returned in range (0 to 5 minutes), it's a bad input
+    else {
+      var copymsg = "Input a proper score fucker";
+      result_array.unshift(copymsg);
+    }
+
     var msg = result_array.join("\n");
 
-    // regex for input validation (numbers only)
+    // regex for input validation (only numberic input accepted)
     let num_hyphen_check = /^[0-9]*$/;
     if (
       num_hyphen_check.test(score) == false ||
       score > 210000 ||
-      score < 5000
+      score < 5000 ||
+      result_array.length > 0
     ) {
       msg = "Input a proper score fucker";
     }
