@@ -82,7 +82,7 @@ exports.handler = async (event) => {
       }
     }
     if (result_array.length > 0) {
-      var copymsg = "/time score " + score;
+      var copymsg = "/time score: " + score;
       result_array.unshift(copymsg);
     }
 
@@ -97,9 +97,9 @@ exports.handler = async (event) => {
     // regex for input validation (only numberic input accepted)
     let num_hyphen_check = /^[0-9]*$/;
     if (
-      num_hyphen_check.test(score) == false ||
-      score > 210000 ||
-      score < 5000 ||
+      (num_hyphen_check.test(score) == false ||
+        score > 210000 ||
+        score < 5000) &&
       result_array.length > 0
     ) {
       msg = "Input a proper score fucker";
