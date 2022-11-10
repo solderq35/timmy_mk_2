@@ -59,13 +59,29 @@ exports.handler = async (event) => {
 
         // put the minutes / seconds / milliseconds together formatted
         var formatted_result;
+        var formatted_seconds;
+        var formatted_milliseconds;
+
+        // add one leading zero to seconds digit if there are less than 10 seconds
         if (seconds < 10) {
-          formatted_result =
-            minutes + ":0" + Math.floor(seconds) + "." + (milliseconds % 1000);
+          formatted_seconds = ":0" + Math.floor(seconds);
         } else {
-          formatted_result =
-            minutes + ":" + Math.floor(seconds) + "." + (milliseconds % 1000);
+          formatted_seconds = ":" + Math.floor(seconds);
         }
+
+        // add two leading zeros to milliseconds digit if there are less than 10 milliseconds
+        if (milliseconds < 10) {
+          formatted_milliseconds = ".00" + (milliseconds % 1000);
+        }
+
+        // add one leading zero to milliseconds digit if there are 10 to 99 milliseconds
+        else if (milliseconds >= 10 && milliseconds < 100) {
+          formatted_milliseconds = ".0" + (milliseconds % 1000);
+        } else {
+          formatted_milliseconds = "." + (milliseconds % 1000);
+        }
+
+        formatted_result = minutes + formatted_seconds + formatted_milliseconds;
         result_array.push(formatted_result);
       }
     }
