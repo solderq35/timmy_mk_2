@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tweetnacl": "^1.0.3",
+	"discord.js": "^14.6.0"
+  }
+}
