@@ -13,8 +13,9 @@ Deviations / Important Info:
 - [Reference Image of code setup in Lambda](https://media.discordapp.net/attachments/1018323831468851202/1040287113008128040/image.png?width=614&height=671)
   - Copy contents of `lambda_bot` folder to top directory of Lambda coding space.
 - I switched to [DiscordJS](https://discordjs.guide/#before-you-begin) for handling the numberic inputs
-- `.env` file isn't included here for my privacy but you will need one (Explained in the tutorial from first bullet point).
+- `.env` and `config.json` files aren't included here for my privacy but you will need one (Explained in the tutorial from first bullet point), as well as [here](https://discordjs.guide/creating-your-bot/#using-config-json)
 - Anything in the register_commands folder can be run via `node register.js` on your local computer. Anything in `lambda_bot` should be run inside of AWS Lambda Code terminal.
 - [Deleting commands documentation](https://discordjs.guide/slash-commands/deleting-commands.html#deleting-specific-commands)
+  - [Right click here for command ID](https://media.discordapp.net/attachments/1018323831468851202/1040345092185137232/image.png)
 - Up to 1 million free Lambda requests (read: bot command usages) per month.
 - Contact me on Discord (Solder#2337) if you want access.
