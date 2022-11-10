@@ -1,12 +1,11 @@
-# timmy_mk_2
+# Timmy MK 2
 
-[AWS Lambda stuff mostly from this tutorial](https://betterprogramming.pub/build-a-discord-bot-with-aws-lambda-api-gateway-cc1cff750292)
+Timmy MK 2 is an homage to the original Timmy the Time Bot programmed by Khunee and Juliend10 in Python. I switched to Javascript as I'm more comfortable with it, and AWS hosting for a more stable hosting solution than the original Timmy bot.
 
-Hitman Calc stuff is based on my [own Time Calc website](https://github.com/solderq35/time-calc-under-5), the orignal Timmy Bot by Khunee / Juliend10, and of course the research done by Hitman
-community members over the past 5 years.
+For a full deep dive into the math behind this, please check [Time Calc Website README](https://github.com/solderq35/time-calc-under-5/blob/main/README.md#mathematics-code-explanation). This bot mostly works the same, except that this bot can return up to 4 possible values, in return for the user typing in less inputs than the Time Calc Website. I kept it that way as the original Timmy Bot did it the same, and also because the speedrunner users are generally ok with sifting through a few possible answers if they can enter less inputs.
 
-Deviations / Important Info:
-
+## Important Technical Info for Lambda / DiscordJS:
+- [AWS Lambda stuff mostly from this tutorial](https://betterprogramming.pub/build-a-discord-bot-with-aws-lambda-api-gateway-cc1cff750292)
 - Must set Payload Format to 2.0. Click AWS in very top left > API Gateway > discord-API > develop > Integrations > Manage Integrations > Edit > Advanced Settings
   - To go back to code: CLick AWS in very top left > Lambda
 - Two most important menus in Lambda - Code and Configuration
