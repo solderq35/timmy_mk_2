@@ -1,6 +1,9 @@
 {
+  "scripts": {
+    "prettier": "prettier --write **/*.{js,ts,tsx,json,html,md,css,scss}"
+  },
   "dependencies": {
     "tweetnacl": "^1.0.3",
-	"discord.js": "^14.6.0"
+    "discord.js": "^14.6.0"
   }
 }

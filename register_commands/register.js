@@ -7,22 +7,14 @@ const headers = {
   "Authorization": `Bot ${process.env.BOT_TOKEN}`,
   "Content-Type": "application/json"
 }
-
-/*
-let command_data = {
-  "name": "food",
-  "type": 1,
-  "description": "replies with dbar ;/",
-}
-*/
 const { SlashCommandBuilder } = require('discord.js');
 
 const data = new SlashCommandBuilder()
 	.setName('time')
-	.setDescription('Replies with your input!')
+	.setDescription('Returns a millisecond time value')
 	.addStringOption(option =>
 		option.setName('score')
-			.setDescription('in-game score'));
+			.setDescription('Score on Rating Screen'));
 
 axios.post(url, JSON.stringify(data), {
   headers: headers,
