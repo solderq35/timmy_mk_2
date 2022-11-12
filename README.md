@@ -19,4 +19,17 @@ For a full deep dive into the math behind this, please check [Time Calc Website 
 - [Deleting commands documentation](https://discordjs.guide/slash-commands/deleting-commands.html#deleting-specific-commands)
   - [Right click here for command ID](https://media.discordapp.net/attachments/1018323831468851202/1040345092185137232/image.png)
 - Up to 1 million free Lambda requests (read: bot command usages) per month.
-- **Contact me on Discord (Solder#2337) if you want access.**
+
+## Usage Instructions
+1. Add the bot to your Discord server using [this URL](https://discord.com/api/oauth2/authorize?client_id=1040175716874080306&permissions=2147483648&scope=bot%20applications.commands), or just DM the bot on Discord at `Timmy MK 2#9428`. Sending commands to the bot in a server and in DM's are both supported.
+2. The required inputs are to type `/time` into the bot, then click on the `score` option, then enter your score value.
+3.  Most video examples from [here](https://www.youtube.com/results?search_query=hitman+3+speedrun&sp=EgIYAQ%253D%253D) or [here](https://www.speedrun.com/hitman_3) will work for getting valid scores. Otherwise, any score value of about 50,000 to 210,000 should work.
+4.  For this example, let's use [this video](https://www.youtube.com/watch?v=zIRAmZdl-y4), which is an 8 second run of the "On Top of the World" Hitman level.
+5. We can see that the end of this video that the score at the end of the video is `83,521`. As shown here: ![Score](https://media.discordapp.net/attachments/833505136290299935/993958134945169418/unknown.png?width=947&height=670)
+6. Now, let's type `/time`, then select the `score` option, then type in the score `83521`.
+
+![Milliseconds Score](https://media.discordapp.net/attachments/1018323831468851202/1041054761006399618/image.png)
+
+![Milliseconds Score](https://media.discordapp.net/attachments/1018323831468851202/1041054950014333018/image.png)
+
+7. As you can see, the bot returns a few viable solutions. One of them (8.981) is within a second of the 8 seconds value shown on the rating screen, so this is the milliseconds value we are looking for. 
