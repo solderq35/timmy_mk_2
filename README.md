@@ -11,13 +11,13 @@ For a full deep dive into the math behind this, please check [Time Calc Website 
   - To go back to code: CLick AWS in very top left > Lambda
 - Anything in the `register_commands` folder can be run via `node register.js` on your local computer. Anything in `lambda_bot` should be run inside of AWS Lambda Code terminal.
   - Two most important menus in Lambda - Code and Configuration (for Env. Variables)
-  - [Reference Image of code setup in Lambda](https://media.discordapp.net/attachments/1018323831468851202/1040287113008128040/image.png?width=614&height=671)
+  - [Reference Image of code setup in Lambda](https://i.ibb.co/nqX9RYs/lambda.png)
   - Copy contents of `lambda_bot` folder to top directory of Lambda coding space.
 - I switched to [DiscordJS](https://discordjs.guide/#before-you-begin) instead of Axios for handling the numberic inputs
 - `.env` and `config.json` files aren't included here for my privacy but you will need one (Explained in the tutorial from first bullet point), as well as [here](https://discordjs.guide/creating-your-bot/#using-config-json)
 
 - [Deleting commands documentation](https://discordjs.guide/slash-commands/deleting-commands.html#deleting-specific-commands)
-  - [Right click here for command ID](https://media.discordapp.net/attachments/1018323831468851202/1040345092185137232/image.png)
+  - [Right click here for command ID](https://i.ibb.co/pjsCPbc/botid.png)
 - Up to 1 million free Lambda requests (read: bot command usages) per month.
 
 ## Usage Instructions
@@ -27,11 +27,11 @@ For a full deep dive into the math behind this, please check [Time Calc Website 
     - **NOTE: Only Hitman level completion times of up to 5 minutes are compatible with the bot.** 
     - Use the [Time Calc Website](https://solderq35.github.io/time-calc-under-5/over5) for times of 5 to 15 minutes.
 4.  For this example, let's use [this video](https://www.youtube.com/watch?v=zIRAmZdl-y4), which is an 8 second run of the "On Top of the World" Hitman level.
-5. We can see that the end of this video that the score at the end of the video is `83,521`. As shown here: ![Score](https://media.discordapp.net/attachments/833505136290299935/993958134945169418/unknown.png?width=947&height=670)
+5. We can see that the end of this video that the score at the end of the video is `83,521`. As shown here: ![Score](https://i.ibb.co/6v63rZm/goronscore.png)
 6. Now, let's type `/time`, then select the `score` option, then type in the score `83521`.
 
-![Milliseconds Score](https://media.discordapp.net/attachments/1018323831468851202/1041054761006399618/image.png)
+![Milliseconds Score](https://i.ibb.co/m69XLN9/slash-input.png)
 
-![Milliseconds Score](https://media.discordapp.net/attachments/1018323831468851202/1041054950014333018/image.png)
+![Milliseconds Score](https://i.ibb.co/7NLTpvb/slashinput2.png)
 
 7. As you can see, the bot returns a few viable solutions. One of them (8.981) is within a second of the 8 seconds value shown on the rating screen, so this is the milliseconds value we are looking for. 
